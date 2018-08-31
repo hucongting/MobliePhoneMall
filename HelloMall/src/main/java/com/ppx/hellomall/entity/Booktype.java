@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -31,6 +32,21 @@ public class Booktype extends Model<Booktype> implements Serializable {
      */
 	private String bookdesc;
 
+	
+	/**
+	 * 存储子表，为了多表联查
+	 */
+	private List<Bookinfo> bookInfoList;
+	
+	
+	
+	public List<Bookinfo> getBookInfoList() {
+		return bookInfoList;
+	}
+
+	public void setBookInfoList(List<Bookinfo> bookInfoList) {
+		this.bookInfoList = bookInfoList;
+	}
 
 	public Integer getId() {
 		return id;

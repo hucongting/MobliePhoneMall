@@ -14,6 +14,15 @@
 		<property name="prefix" value="/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
+
+	<!-- 解决ie浏览器springmvc返回json数据弹出下载页面 -->	
+	<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
 	
 	<!-- 访问静态资源 -->
 	<!-- <mvc:resources location="/css/" mapping="/css/**"></mvc:resources> -->

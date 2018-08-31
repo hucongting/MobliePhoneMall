@@ -32,10 +32,24 @@ public class BooktypeController {
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping("/select")
+	@RequestMapping("/find")
 	public List<Booktype> test1() {
 		
 		List<Booktype> bookTypeList = bookTypeService.selectList(new EntityWrapper<Booktype>());
+		System.out.println(bookTypeList);
+		return bookTypeList;
+		
+	}
+	
+	/**
+	 * 测试多表查
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/select")
+	public List<Booktype> test2(){
+		
+		List<Booktype> bookTypeList = bookTypeService.selectBookTypeInfoList();
 		System.out.println(bookTypeList);
 		return bookTypeList;
 		

@@ -1,0 +1,58 @@
+package com.ppx.hellomall.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.ppx.hellomall.entity.Booktype;
+import com.ppx.hellomall.service.IBooktypeService;
+
+/**
+ * <p>
+ *  前端控制器
+ * </p>
+ *
+ * @author hucongting
+ * @since 2018-08-31
+ */
+@Controller
+@RequestMapping("/booktype")
+public class BooktypeController {
+	
+	@Autowired
+	private IBooktypeService bookTypeService;
+	
+	
+	/**
+	 * AR模式查询，封装好了基本单表的增删该查
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/select")
+	public List<Booktype> test1() {
+		
+		List<Booktype> bookTypeList = bookTypeService.selectList(new EntityWrapper<Booktype>());
+		System.out.println(bookTypeList);
+		return bookTypeList;
+		
+	}
+	
+	/**
+	 * 测试多表查
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/select")
+	public List<Booktype> test2(){
+		
+		List<Booktype> bookTypeList = bookTypeService.selectBookTypeInfoList();
+		System.out.println(bookTypeList);
+		return bookTypeList;
+		
+	}
+	
+}

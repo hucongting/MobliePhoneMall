@@ -4,6 +4,10 @@ import com.ppx.hellomall.entity.Booktype;
 import com.ppx.hellomall.mapper.BooktypeDao;
 import com.ppx.hellomall.service.IBooktypeService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,5 +20,15 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class BooktypeServiceImpl extends ServiceImpl<BooktypeDao, Booktype> implements IBooktypeService {
+
+	@Autowired
+	private BooktypeDao bookTypeDao;
+	
+	@Override
+	public List<Booktype> selectBookTypeInfoList() {
+		
+		return bookTypeDao.selectBookTypeInfoList();
+		
+	}
 	
 }

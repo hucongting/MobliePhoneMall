@@ -7,11 +7,27 @@
 		<id column="id" property="id" />
 		<result column="typename" property="typename" />
 		<result column="bookdesc" property="bookdesc" />
+		<!-- 关联表 -->
+		<collection property="bookInfoList" ofType="com.ppx.hellomall.entity.Bookinfo">
+			<id column="id" property="id" />
+			<result column="btid" property="btid" />
+			<result column="bookname" property="bookname" />
+			<result column="bookdesc" property="bookdesc" />
+		</collection>
 	</resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, typename, bookdesc
     </sql>
+    
+    <!-- 测试两表查询 -->
+    <select id="selectBookTypeInfoList" resultMap="BaseResultMap">
+    	SELECT 
+    		b.id, b.typename, b.bookdesc, bf.id, bf.btid, bf.bookname, bf.bookdesc
+    	FROM booktype b JOIN bookinfo bf
+    	ON b.id = bf.btid
+    </select>
+    
 
 </mapper>
