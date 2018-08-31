@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\14718\Desktop\MobilePhoneMall\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2681654299.index
+948314227.index
+3172391870.index
+854552140.index
+2999519734.index
+998320997.index
+313344316.index

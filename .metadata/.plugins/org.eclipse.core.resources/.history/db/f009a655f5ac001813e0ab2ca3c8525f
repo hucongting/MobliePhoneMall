@@ -1,0 +1,94 @@
+package com.ppx.hello.generator;
+
+import org.junit.Test;
+
+import com.baomidou.mybatisplus.enums.IdType;
+import com.baomidou.mybatisplus.generator.AutoGenerator;
+import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
+import com.baomidou.mybatisplus.generator.config.GlobalConfig;
+import com.baomidou.mybatisplus.generator.config.PackageConfig;
+import com.baomidou.mybatisplus.generator.config.StrategyConfig;
+import com.baomidou.mybatisplus.generator.config.rules.DbType;
+
+
+/**
+ * MP 代码生成器
+ */
+public class MpGenerator {
+
+	/**
+	 * 生成配置
+	 */
+	@Test
+	public void MpTestMain() {
+
+        AutoGenerator generator = new AutoGenerator();
+
+        /**
+         * 全局配置
+         */
+        GlobalConfig config = new GlobalConfig();
+        config.setOutputDir("F://Eclipse//eclipse jee//TeduStore//src//main//java");
+        config.setFileOverride(true); //文件覆盖
+        
+        config.setActiveRecord(true); //是否支持AR
+        config.setEnableCache(false); //二级缓存
+        config.setBaseResultMap(true); //XML resultMap
+        config.setBaseColumnList(true); ////生成基本的SQL片段
+        config.setAuthor("hucongting"); //作者
+
+        config.setXmlName("%sMapper");
+        config.setMapperName("%sDao");
+        config.setServiceName("I%sService");
+        config.setServiceImplName("%sServiceImpl");
+        config.setControllerName("%sController");
+
+
+        /**
+         * 数据源配置
+         */
+        DataSourceConfig dataSourceConfig = new DataSourceConfig();
+        dataSourceConfig.setDbType(DbType.MYSQL);
+        dataSourceConfig.setDriverName("com.mysql.jdbc.Driver");
+        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/tedu_store");
+        dataSourceConfig.setUsername("root");
+        dataSourceConfig.setPassword("root");
+
+
+        /**
+         * 策略配置
+         */
+        StrategyConfig strategyConfig = new StrategyConfig();
+        //全局大写命名
+        //strategyConfig.setCapitalMode(true);
+        //表前缀
+        strategyConfig.setInclude(new String[]{"booktype","bookinfo"});
+
+
+        /**
+         * 包名策略配置
+         * 注意 %s 会自动填充表实体属性
+         */
+        PackageConfig packageConfig = new PackageConfig();
+        packageConfig.setParent("com.ppx.mall");
+        packageConfig.setEntity("entity");
+        packageConfig.setXml("mapper.xml");
+        packageConfig.setMapper("mapper");
+        packageConfig.setService("service");
+        packageConfig.setServiceImpl("service.impl");
+        packageConfig.setController("controller");
+
+
+        /**
+         * 整合配置
+         */
+        generator.setGlobalConfig(config);
+        generator.setDataSource(dataSourceConfig);
+        generator.setStrategy(strategyConfig);
+        generator.setPackageInfo(packageConfig);
+        //执行
+        generator.execute();
+
+    }
+	
+}

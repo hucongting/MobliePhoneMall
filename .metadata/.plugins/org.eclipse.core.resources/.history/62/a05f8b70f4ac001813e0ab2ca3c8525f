@@ -1,0 +1,9 @@
+package com.ppx.hello.generator;
+
+/**
+ * MP 代码生成器
+ */
+public class MpGenerator {
+
+
+}
