@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author hucongting
@@ -23,12 +23,12 @@ public class BooktypeServiceImpl extends ServiceImpl<BooktypeDao, Booktype> impl
 
 	@Autowired
 	private BooktypeDao bookTypeDao;
-	
-	@Override
+
 	public List<Booktype> selectBookTypeInfoList() {
-		
-		return bookTypeDao.selectBookTypeInfoList();
-		
+		// TODO Auto-generated method stub
+		return null;
 	}
+	
+	
 	
 }
