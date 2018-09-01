@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ppx.hellomall.mapper.UserDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.ppx.hellomall.entity.User">
+		<id column="id" property="id" />
+		<result column="username" property="username" />
+		<result column="password" property="password" />
+		<result column="gender" property="gender" />
+		<result column="phone" property="phone" />
+		<result column="email" property="email" />
+		<result column="uuid" property="uuid" />
+		<result column="created_user" property="created_user" />
+		<result column="created_time" property="created_time" />
+		<result column="modified_user" property="modified_user" />
+		<result column="modified_time" property="modified_time" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, username, password, gender, phone, email, uuid, created_user, created_time, modified_user, modified_time
+    </sql>
+
+</mapper>

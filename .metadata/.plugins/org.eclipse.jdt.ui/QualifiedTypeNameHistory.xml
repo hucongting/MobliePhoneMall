@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.AutoGenerator"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.GlobalConfig"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.DataSourceConfig"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.rules.DbType"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.enums.IdType"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.StrategyConfig"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.PackageConfig"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.ppx.hellomall.service.IBooktypeService"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.mapper.EntityWrapper"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="com.ppx.hellomall.entity.Bookinfo"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.ppx.hellomall.entity.Booktype"/>
+<fullyQualifiedTypeName name="com.ppx.hellomall.mapper.BooktypeDao"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+</qualifiedTypeNameHistroy>

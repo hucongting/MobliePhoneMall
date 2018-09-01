@@ -1,0 +1,159 @@
+package com.ppx.hellomall.entity;
+
+import java.math.BigDecimal;
+import java.util.Date;
+import com.baomidou.mybatisplus.activerecord.Model;
+import java.io.Serializable;
+
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author hucongting
+ * @since 2018-09-01
+ */
+public class Order_detail extends Model<Order_detail> {
+
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * 主键
+     */
+	private String detail_id;
+    /**
+     * 关联订单的外键
+     */
+	private String order_id;
+    /**
+     * 关联商品的外键
+     */
+	private String product_id;
+    /**
+     * 商品名称
+     */
+	private String product_name;
+    /**
+     * 当前价格,单位分
+     */
+	private BigDecimal product_price;
+    /**
+     * 数量
+     */
+	private Integer product_quantity;
+    /**
+     * 小图
+     */
+	private String product_icon;
+    /**
+     * 创建人
+     */
+	private String created_user;
+    /**
+     * 创建时间
+     */
+	private Date created_time;
+    /**
+     * 修改人
+     */
+	private String modified_user;
+    /**
+     * 修改时间
+     */
+	private Date modified_time;
+
+
+	public String getDetail_id() {
+		return detail_id;
+	}
+
+	public void setDetail_id(String detail_id) {
+		this.detail_id = detail_id;
+	}
+
+	public String getOrder_id() {
+		return order_id;
+	}
+
+	public void setOrder_id(String order_id) {
+		this.order_id = order_id;
+	}
+
+	public String getProduct_id() {
+		return product_id;
+	}
+
+	public void setProduct_id(String product_id) {
+		this.product_id = product_id;
+	}
+
+	public String getProduct_name() {
+		return product_name;
+	}
+
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
+	}
+
+	public BigDecimal getProduct_price() {
+		return product_price;
+	}
+
+	public void setProduct_price(BigDecimal product_price) {
+		this.product_price = product_price;
+	}
+
+	public Integer getProduct_quantity() {
+		return product_quantity;
+	}
+
+	public void setProduct_quantity(Integer product_quantity) {
+		this.product_quantity = product_quantity;
+	}
+
+	public String getProduct_icon() {
+		return product_icon;
+	}
+
+	public void setProduct_icon(String product_icon) {
+		this.product_icon = product_icon;
+	}
+
+	public String getCreated_user() {
+		return created_user;
+	}
+
+	public void setCreated_user(String created_user) {
+		this.created_user = created_user;
+	}
+
+	public Date getCreated_time() {
+		return created_time;
+	}
+
+	public void setCreated_time(Date created_time) {
+		this.created_time = created_time;
+	}
+
+	public String getModified_user() {
+		return modified_user;
+	}
+
+	public void setModified_user(String modified_user) {
+		this.modified_user = modified_user;
+	}
+
+	public Date getModified_time() {
+		return modified_time;
+	}
+
+	public void setModified_time(Date modified_time) {
+		this.modified_time = modified_time;
+	}
+
+	@Override
+	protected Serializable pkVal() {
+		return this.detail_id;
+	}
+
+}

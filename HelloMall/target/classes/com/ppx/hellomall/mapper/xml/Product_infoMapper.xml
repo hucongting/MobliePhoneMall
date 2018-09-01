@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ppx.hellomall.mapper.Product_infoDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.ppx.hellomall.entity.Product_info">
+		<id column="product_id" property="product_id" />
+		<result column="brandtype_id" property="brandtype_id" />
+		<result column="product_name" property="product_name" />
+		<result column="product_price" property="product_price" />
+		<result column="product_stock" property="product_stock" />
+		<result column="product_description" property="product_description" />
+		<result column="product_icon" property="product_icon" />
+		<result column="product_status" property="product_status" />
+		<result column="created_user" property="created_user" />
+		<result column="created_time" property="created_time" />
+		<result column="modified_user" property="modified_user" />
+		<result column="modified_time" property="modified_time" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        product_id, brandtype_id, product_name, product_price, product_stock, product_description, product_icon, product_status, created_user, created_time, modified_user, modified_time
+    </sql>
+
+</mapper>

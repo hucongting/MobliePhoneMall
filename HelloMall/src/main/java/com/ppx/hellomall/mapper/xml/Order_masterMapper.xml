@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ppx.hellomall.mapper.Order_masterDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.ppx.hellomall.entity.Order_master">
+		<id column="order_id" property="order_id" />
+		<result column="buyer_name" property="buyer_name" />
+		<result column="buyer_phone" property="buyer_phone" />
+		<result column="buyer_address" property="buyer_address" />
+		<result column="buyer_userid" property="buyer_userid" />
+		<result column="order_amount" property="order_amount" />
+		<result column="order_status" property="order_status" />
+		<result column="pay_status" property="pay_status" />
+		<result column="created_user" property="created_user" />
+		<result column="created_time" property="created_time" />
+		<result column="modified_user" property="modified_user" />
+		<result column="modified_time" property="modified_time" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        order_id, buyer_name, buyer_phone, buyer_address, buyer_userid, order_amount, order_status, pay_status, created_user, created_time, modified_user, modified_time
+    </sql>
+
+</mapper>

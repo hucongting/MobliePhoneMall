@@ -25,6 +25,7 @@
 	</bean>
 	
 	<!-- 访问静态资源 -->
-	<!-- <mvc:resources location="/css/" mapping="/css/**"></mvc:resources> -->
+	<mvc:resources location="/home/" mapping="/home/**"></mvc:resources>
+	<mvc:resources location="/admin/" mapping="/admin/**"></mvc:resources>
 	
 </beans>
